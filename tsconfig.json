@@ -1,8 +1,17 @@
 {
+  "extends": "@tsconfig/node22/tsconfig.json",
   "compilerOptions": {
-    "lib": [
-      "ES2023",
-    ],
-    "experimentalDecorators": true
-  }
+    "rootDir": "./src",
+    "outDir": "./lib",
+    "declaration": true,
+    "sourceMap": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "lib",
+    "src/**/*.test.ts",
+  ]
 }
